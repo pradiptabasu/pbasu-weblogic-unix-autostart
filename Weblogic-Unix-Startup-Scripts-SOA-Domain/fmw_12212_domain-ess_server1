@@ -1,0 +1,110 @@
+#!/bin/sh
+#
+# fmw_12212_domain Oracle Weblogic ess_server1 service init script
+#
+# chkconfig:   345 87 13
+# description: Starts and stops Oracle Weblogic ess_server1 for fmw_12212_domain.
+# The script needs to be saved as /etc/init.d/fmw_12212_domain-ess_server1 and then issue chkconfig –add fmw_12212_domain-ess_server1 as root
+#
+### BEGIN INIT INFO
+# Provides: fmw_12212_domain-ess_server1
+# Required-Start: $network $local_fs
+# Required-Stop:
+# Should-Start:
+# Should-Stop:
+# Default-Start: 3 4 5
+# Default-Stop: 0 1 2 6
+# Short-Description: fmw_12212_domain Oracle Weblogic ess_server1 service.
+# Description: Starts and stops Oracle Weblogic ess_server1 for fmw_12212_domain.
+### END INIT INFO
+ 
+. /etc/rc.d/init.d/functions
+ 
+export MW_HOME="/home/ec2-user/Oracle/Middleware12212/Oracle_Home"
+export DOMAIN_HOME="$MW_HOME/user_projects/domains/fmw_12212_domain"
+export JAVA_HOME="/usr/java/jdk1.8.0_191-amd64"
+export SCRIPTS_DIR="/home/ec2-user/scripts"
+
+DAEMON_USER="ec2-user"
+#PROCESS_STRING="^.*$DOMAIN_HOME.*weblogic.ess_server1.*"
+PROCESS_STRING="^.*weblogic.Name=ess_server1.*"
+
+source $MW_HOME/wlserver/server/bin/setWLSEnv.sh > /dev/null
+export ess_server1Home="$DOMAIN_HOME/server/ess_server1"
+ess_server1LockFile="$ess_server1Home/ess_server1.log.lck"
+PROGRAMSTART="$SCRIPTS_DIR/fmw_12212_domain_startWeblogic_ess_server1.sh"
+PROGRAMSTOP="$SCRIPTS_DIR/fmw_12212_domain_stopWeblogic_ess_server1.sh"
+PROGRAMSTATUS="$SCRIPTS_DIR/fmw_12212_domain_checkStatusWeblogic_ess_server1.sh"
+SERVICE_NAME=`/bin/basename $0`
+LOCKFILE="/var/lock/subsys/$SERVICE_NAME"
+OUT_FILE="$DOMAIN_HOME/servers/ess_server1/log/ess_server1.out"
+
+RETVAL=0
+ 
+start() {
+	/bin/su $DAEMON_USER -c "$PROGRAMSTART &"
+	RETVAL=$?
+	if [ $RETVAL -eq 0 ] ; then
+        wait_for "Server state changed to RUNNING."
+    else
+        echo "FAILED: $RETVAL. Please check $OUT_FILE for more information."
+    fi
+    echo
+}
+
+wait_for() {
+    res=$(cat "$OUT_FILE" | fgrep -c "$1")
+    count=60
+    while [[ ! $res -gt 0 ]] && [[ $count -gt 0 ]]
+    do
+        sleep 1
+        count=$(($count - 1))
+        res=$(cat "$OUT_FILE" | fgrep -c "$1")
+    done
+    res=$(cat "$OUT_FILE" | fgrep -c "$1")
+    if [ ! $res -gt 0 ]; then
+        echo "FAILED or took too long time to start. Please check $OUT_FILE for more information."
+    else
+        echo "OK"
+        touch $LOCKFILE
+    fi
+}
+ 
+stop() {
+		/bin/su $DAEMON_USER -c "$PROGRAMSTOP &"
+		RETVAL=$?
+}
+
+status() {
+		/bin/su $DAEMON_USER -c "$PROGRAMSTATUS &"
+		RETVAL=$?
+}
+ 
+restart() {
+        stop
+        sleep 10
+        start
+}
+ 
+case "$1" in
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  restart|force-reload|reload)
+        restart
+        ;;
+  condrestart|try-restart)
+        restart
+        ;;
+  status)
+        status
+        ;;
+  *)
+        echo $"Usage: $0 {start|stop|status|restart|reload|force-reload|condrestart}"
+        exit 1
+esac
+ 
+exit $RETVAL
