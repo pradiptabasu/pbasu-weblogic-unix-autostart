@@ -1,0 +1,41 @@
+2018-10-26 08:40:45,161 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - Launcher log file is /tmp/OraInstall2018-10-26_08-40-44AM/launcher2018-10-26_08-40-44AM.log.
+2018-10-26 08:40:45,246 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - Extracting to /tmp/orcl3167263004476943825.tmp.
+2018-10-26 08:40:45,254 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - Extracting files...
+2018-10-26 08:40:49,267 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - Finished self extraction to /tmp/orcl3167263004476943825.tmp.
+2018-10-26 08:40:49,537 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - Using the parameter file: /tmp/orcl3167263004476943825.tmp/Disk1/install/linux64/oraparam.ini
+2018-10-26 08:40:49,548 INFO  [1] com.oracle.cie.nextgen.launcher.Launcher - oraparam.ini key ignored by this launcher: DISTRIBUTION
+2018-10-26 08:40:49,549 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - Starting Oracle Universal Installer
+
+2018-10-26 08:40:49,566 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - Checking if CPU speed is above 300 MHz
+2018-10-26 08:40:49,570 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - .   Actual 2397.175 MHz
+2018-10-26 08:40:49,570 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils -     Passed
+2018-10-26 08:40:49,570 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - Checking swap space: must be greater than 512 MB
+2018-10-26 08:40:49,573 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - .   Actual 2097148 MB
+2018-10-26 08:40:49,574 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils -     Passed
+2018-10-26 08:40:49,574 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - Checking if this platform requires a 64-bit JVM
+2018-10-26 08:40:49,575 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - .   Actual 64
+2018-10-26 08:40:49,576 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils -     Passed (64-bit not required)
+2018-10-26 08:40:49,576 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - Checking temp space: must be greater than 300 MB
+2018-10-26 08:40:49,577 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - .   Actual 1316 MB
+2018-10-26 08:40:49,578 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils -     Passed
+2018-10-26 08:40:49,578 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - 
+
+2018-10-26 08:40:49,578 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - Preparing to launch the Oracle Universal Installer from /tmp/OraInstall2018-10-26_08-40-44AM
+2018-10-26 08:40:49,632 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - Unzip of /tmp/orcl3167263004476943825.tmp/Disk1/stage/Components/oracle.jse.dms/12.1.3.0.0/DataFiles/filegroup1.jar to /tmp/OraInstall2018-10-26_08-40-44AM/oracle_common succeeded.
+2018-10-26 08:40:49,639 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - Unzip of /tmp/orcl3167263004476943825.tmp/Disk1/stage/Components/oracle.help.ohj/12.1.3.0.0/DataFiles/filegroup1.jar to /tmp/OraInstall2018-10-26_08-40-44AM/oracle_common succeeded.
+2018-10-26 08:40:49,644 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - Unzip of /tmp/orcl3167263004476943825.tmp/Disk1/stage/Components/oracle.help.share/12.1.3.0.0/DataFiles/filegroup1.jar to /tmp/OraInstall2018-10-26_08-40-44AM/oracle_common succeeded.
+2018-10-26 08:40:49,676 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - Unzip of /tmp/orcl3167263004476943825.tmp/Disk1/stage/Components/oracle.bali.ice/6.1.3.2.1/DataFiles/filegroup1.jar to /tmp/OraInstall2018-10-26_08-40-44AM/oracle_common succeeded.
+2018-10-26 08:40:49,721 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - Unzip of /tmp/orcl3167263004476943825.tmp/Disk1/stage/Components/oracle.bali.jewt/12.1.3.0.0/DataFiles/filegroup1.jar to /tmp/OraInstall2018-10-26_08-40-44AM/oracle_common succeeded.
+2018-10-26 08:40:49,722 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - Unzip of /tmp/orcl3167263004476943825.tmp/Disk1/stage/Components/oracle.fmw.common.wizard.resources/12.1.3.0.0/DataFiles/filegroup1.jar to /tmp/OraInstall2018-10-26_08-40-44AM/oracle_common succeeded.
+2018-10-26 08:40:49,724 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - Unzip of /tmp/orcl3167263004476943825.tmp/Disk1/stage/Components/oracle.bali.share/12.1.3.0.0/DataFiles/filegroup1.jar to /tmp/OraInstall2018-10-26_08-40-44AM/oracle_common succeeded.
+2018-10-26 08:40:49,912 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - Unzip of /tmp/orcl3167263004476943825.tmp/Disk1/stage/Components/oracle.nginst.common/13.2.0.0.0/DataFiles/filegroup1.jar to /tmp/OraInstall2018-10-26_08-40-44AM/oui succeeded.
+2018-10-26 08:40:50,087 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - Unzip of /tmp/orcl3167263004476943825.tmp/Disk1/stage/Components/oracle.nginst.core/13.2.0.0.0/DataFiles/filegroup1.jar to /tmp/OraInstall2018-10-26_08-40-44AM/oui succeeded.
+2018-10-26 08:40:50,091 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - Unzip of /tmp/orcl3167263004476943825.tmp/Disk1/stage/Components/oracle.nginst.thirdparty/13.2.0.0.0/DataFiles/filegroup1.jar to /tmp/OraInstall2018-10-26_08-40-44AM/oracle_common succeeded.
+2018-10-26 08:40:50,175 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - Unzip of /tmp/orcl3167263004476943825.tmp/Disk1/stage/Components/oracle.as.install.ui.framework/12.1.3.0.0/DataFiles/filegroup1.jar to /tmp/OraInstall2018-10-26_08-40-44AM/oui succeeded.
+2018-10-26 08:40:50,178 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - Unzip of /tmp/orcl3167263004476943825.tmp/Disk1/stage/Components/oracle.as.install.common.help/12.1.3.0.0/DataFiles/filegroup1.jar to /tmp/OraInstall2018-10-26_08-40-44AM/oui succeeded.
+2018-10-26 08:40:50,191 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - Unzip of /tmp/orcl3167263004476943825.tmp/Disk1/stage/Components/oracle.as.install.common.help/12.1.3.0.0/DataFiles/filegroup2.jar to /tmp/OraInstall2018-10-26_08-40-44AM/oui succeeded.
+2018-10-26 08:40:50,198 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - Unzip of /tmp/orcl3167263004476943825.tmp/Disk1/stage/Components/oracle.as.install.wls/12.1.3.0.0/DataFiles/filegroup1.jar to /tmp/OraInstall2018-10-26_08-40-44AM/oui succeeded.
+2018-10-26 08:40:50,215 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - Unzip of /tmp/orcl3167263004476943825.tmp/Disk1/stage/Components/oracle.as.install.wls.prerequisite/12.1.3.0.0/DataFiles/filegroup1.jar to /tmp/OraInstall2018-10-26_08-40-44AM/oui succeeded.
+2018-10-26 08:40:50,218 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - Unzip of /tmp/orcl3167263004476943825.tmp/Disk1/stage/Components/oracle.opss.t2p/12.1.3.0.0/DataFiles/filegroup1.jar to /tmp/OraInstall2018-10-26_08-40-44AM/oracle_common succeeded.
+2018-10-26 08:40:50,221 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - Unzip of /tmp/orcl3167263004476943825.tmp/Disk1/stage/Components/oracle.nginst.core/13.2.0.0.0/DataFiles/filegroup5.jar to /tmp/OraInstall2018-10-26_08-40-44AM/oui succeeded.
+2018-10-26 08:40:50,224 INFO  [1] com.oracle.cie.nextgen.launcher.LogUtils - The number of files bootstrapped to the /tmp/OraInstall2018-10-26_08-40-44AM/oui directory is 174.
